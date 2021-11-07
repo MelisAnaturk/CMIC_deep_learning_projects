@@ -1,7 +1,7 @@
 # A guide to kick starting a deep learning project on UCL CMIC's HPC cluster
 
 ## 1. Introduction
-This page provides a list of resources to get you started on projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster for new starters. Note that some of the text and information here overlaps with the deep learning page available on https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279
+This page provides a list of resources to get you started on projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster for new starters. Note that there is quite an overlap between this page and UCL Dementia Research Centre Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
 
 ## 2. General overview of deep learning
 Deep learning is a subfield of Machine learning where algorithms are structured into layers of nodes or "neurons", otherwise refer "neural networks" (consisting of an input layer, hidden layers and output layer, see example below). While classical machine learning requires features to already be extracted from the images (e.g., FreeSurfer measures of cortical thickness, surface area and cortical/subcortical volumes), deep learning models are able to **learn the features** directly to the raw images, without human intervention. Deep learning models have led to some of the most accurate predictions..
