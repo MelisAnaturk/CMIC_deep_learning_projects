@@ -1,4 +1,4 @@
-#A guide to kick starting a deep learning project on UCL CMIC's HPC cluster
+# A guide to kick starting a deep learning project on UCL CMIC's HPC cluster
 
 ## 1. Introduction
 This page provides a list of resources to get you started on projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster for new starters. Note that some of the text and information here overlaps with the deep learning page available on https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279
