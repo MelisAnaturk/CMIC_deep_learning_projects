@@ -125,30 +125,25 @@ Where ```labels.csv``` contains the ID, label and file pathway for each particip
 Put together your ```python``` script or ```Jupyter``` notebook. Some important considerations here are appropriate neural network architecture for the task at hand and the type of data augmentation you plan to apply to the images, which can help reduce the risk of overfitting to your training set. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug of your script. For some example scripts for Segmentation and Classification using the MONAI framework here. 
 
 If you are using Google Colab or an equivalent and want to test your code, it's advisable to use publicly available data. Some examples include IXI dataset or OASIS.
-    
-Once you’re happy that things generally work – the next step is to import your script to the cluster. 
 
-There are several ways to do this (e.g., ``rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:
 ### 6. Move your script to cluster
+Once you’re happy that things generally work – the next step is to import your script to the cluster. 
+There are several ways to do this (e.g., ```rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:
+    
 1. Type the following into a new terminal (replace username with your details):
-  
-  ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
+```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
   
 2. Then type the following into another terminal (logged into the cluster):
-  
-  ```scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts```
+```scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts```
 
 ## 7. Submit bash script to SGE scheduler or request an interactive session
 ```example.sh```  contains an example script that you can use to submit your DL job
 
  If you need a short interactive session for debugging you can request using ```qrsh```:
-  
- ``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2```
- 
- 
-  
+``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2```
+    
 ## 8. Evaluating model performance
-You can monitor the progress of training through plots of your learning curve of your model
+You can monitor the progress of training through plots of your learning curve of your model..
 
 Unfortunately, there isn’t a way to view your plots in the cluster (that I’m aware of), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
