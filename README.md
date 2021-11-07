@@ -49,7 +49,7 @@ You can find advice on working with the Computer Science high-performance comput
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
-4. Install a copy of all of the python packages needed for your DL job using ```pip```.  First, prepare a text file that contains a list of all required packages (in the following format: <package_name>==<version>) and save this to your scratch (e.g.,“requirements.txt”):
+4. Install a copy of all of the python packages needed for your DL job using ```pip``` or ```pip3```.  First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g.,“requirements.txt”):
 ```
 ...
 Markdown==3.3.3
