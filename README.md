@@ -23,6 +23,14 @@ You may also be able to request to audit the following courses (*UCL staff and s
 2. MPHY0041: Machine Learning in Medical Imaging (contact: Andre Altmann, a.altmann@ucl.ac.uk)
 3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
+Useful packages to be aware of:
+1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging: 
+    1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)
+    1.2 Various tutorials on 2D and 3D classification and segmentation examples
+2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
+    2.1 Introduction to Tensorflow and biomedical imaging analysis
+    2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
+
 ### 2.3 Getting started
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster here. This includes links for things like:
 
@@ -108,9 +116,4 @@ IXI: T1-weighted, T2-weighted and DTI images from 600 healthy individuals (ages 
 OASIS-1: T1-weighted images from 416 participants (ages: 18-96, healthy and clinically diagnosed with mild-to-moderate AD)
 Loading and preprocessing your images
 
-MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging:
-Series of videos from a 2-day bootcamp introduction to MONAI (2020)
-Various tutorials on 2D and 3D classification and segmentation examples
-Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
-Introduction to Tensorflow and biomedical imaging analysis
-Several tutorials covering the basics of reading in images, data augmentation and building a model
+
