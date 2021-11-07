@@ -79,6 +79,7 @@ There are several ways to do this (e.g., ``rsync```), but I tend to use ```scp``
 1. Type the following into a new terminal (replace username with your details):
   
   ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
+  
 2. Then type the following into another terminal (logged into the cluster):
   
   ```scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts```
