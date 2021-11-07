@@ -32,8 +32,8 @@ Useful packages to be aware of:
     2.1 Introduction to Tensorflow and biomedical imaging analysis    
     2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
 
-## 3. Getting started on Comic
-You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e. ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
+## 3. Getting started on the cluster
+You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e., ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
 
 1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
 3. Familiarise yourself with the Sun Grid Engine (SGE)
