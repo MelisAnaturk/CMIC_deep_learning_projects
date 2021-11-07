@@ -12,7 +12,7 @@ Deep learning is a subfield of Machine learning where algorithms are structured 
 3. Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
 
 ### 2.2 Resources 
-While an in-depth introduction is beyond the scope of this page, I would highly recommend checking out several excellent resources that have previously been published on the topic:
+An in-depth introduction to deep learning is beyond the scope of this page as there are already several excellent resources that are publicly available on topic:
 
 1. Brief introductory article on deep learning
 2. Neural Networks and Deep learning course run by Andrew Ng on Coursera
@@ -25,11 +25,16 @@ You may also be able to request to audit the following courses (*UCL staff and s
 
 Useful packages to be aware of:
 1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging: 
+
     1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)
-    1.2 Various tutorials on 2D and 3D classification and segmentation examples
+    
+    3.2 Various tutorials on 2D and 3D classification and segmentation examples
+    
 2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
+
     2.1 Introduction to Tensorflow and biomedical imaging analysis
-    2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
+    
+    4.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
 
 ### 2.3 Getting started
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster here. This includes links for things like:
