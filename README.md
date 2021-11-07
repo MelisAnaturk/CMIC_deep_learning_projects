@@ -139,7 +139,9 @@ There are several ways to do this (e.g., ```rsync```), but I tend to use ```scp`
 ```example.sh```  contains an example script that you can use to submit your DL job
 
  If you need a short interactive session for debugging you can request using ```qrsh```:
+ 
 ``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2```
+Where this line would request 2 gpus for 30 minutes (max tmem of 4G).
     
 ## 8. Evaluating model performance
 You can monitor the progress of training through plots of your learning curve of your model..
@@ -148,6 +150,7 @@ Unfortunately, there isn’t a way to view your plots in the cluster (that I’m
 1. Type the following into a new command line terminal (replace username with your details):
   
   ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
+  
 2. In another terminal (make sure you are not logged into the cluster):
   
 ```scp -P 2222 username@localhost:/home/username/plot.pdf /Users/ExampleName/deep_learning_project/```
