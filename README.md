@@ -1,7 +1,9 @@
 # A guide to kick starting a deep learning project on UCL CMIC's HPC cluster
 
 ## 1. Introduction
-This page provides a list of resources to get you started on projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster for new starters. Note that there is quite an overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
+This page provides some tips on getting started with projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster for new starters. Note that there is quite an overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
+
+***Disclaimer: This is by no means an exhaustive introduction and the information on this page may at some point become outdated. If you do find any mistakes or inaccuracies please do get in touch @ melis.anaturk.14@ucl.ac.uk or create a pull request.***
 
 ## 2. General overview of deep learning
 Deep learning is a subfield of Machine learning where algorithms are structured into layers of nodes or "neurons", otherwise refer "neural networks" (consisting of an input layer, hidden layers and output layer, see example below). While classical machine learning requires features to already be extracted from the images (e.g., FreeSurfer measures of cortical thickness, surface area and cortical/subcortical volumes), deep learning models are able to **learn the features** directly to the raw images, without human intervention. Deep learning models have led to some of the most accurate predictions..
@@ -42,11 +44,11 @@ You can find advice on working with the Computer Science high-performance comput
 1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
 2. Familiarise yourself with the Sun Grid Engine (SGE)
 3. Understand best practices for submitting GPU jobs on the cluster
+4. Ensure you have enough scratch space to host your data (!) and otherwise liase with your line manager/superviser to request more scratch space
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
 4. Install a copy of all of the python packages needed for your DL job using ```pip```.  First, prepare a text file that contains a list of all required packages (in the following format: <package_name>==<version>) and save this to your scratch (e.g.,“requirements.txt”):
-
 ```
 ...
 Markdown==3.3.3
@@ -72,20 +74,34 @@ Once you have an exhaustive list of packages, run the following in your command 
 
 **Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.**
 
-## 4. Organise your data and create a csv file of labels
-It's worth spending some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
-  
-Data download:
-  wget
-  biobank specific instructions
-  importing using 
-  
-Here are a couple of examples:
-<example>
+## 4. Downloading and organising your data and create a csv file of labels
+4.1 Getting data onto the cluster is a straight forward process. For example you can you ```wget``` for publicly available data. E.g. for IXI data:
 
-As a general rule of thumb, you will need a directory containing all of your input data (e.g., T1 images) and a .csv file that contains the ID, label and file pathway for each person in your sample:
-<include example here>
+``` wget ```
+4.2 UK Biobank have specific instructions on downloading data using specific helper programs including ```ukbfetch```, with more infromation available here (REFERENCE).
+
+4.3  You can also import a copy onto the cluster. 
+    
+I's worth spending some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
+If estimating the class of individual (e.g., female/male, patient/control) you could organise it as follows:
  
+```
+```
+
+  
+```   
+├── Sub_101
+│   └── T1.nii.gz
+├── Sub_102
+│   └── T1.nii.gz
+├── Sub_103
+│   └── T1.nii.gz
+├── Sub_104
+│   └── T1.nii.gz
+``` 
+    
+You will need a directory containing all of your input data (e.g., T1 images) and a .csv file that contains the ID, label and file pathway for each person in your sample
+    
 ### 5. Prepare your script
 Put together your python script or Jupyter notebook - Google Colab is a good starting point to do an initial debug of your script. You can download publicly available images for this step e.g., IXI data. Once you’re happy that things generally work – you can import your script to the cluster. 
 
