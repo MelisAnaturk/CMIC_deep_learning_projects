@@ -121,12 +121,12 @@ Alternatively, if you are predicting a continuous variable (e.g., age), then you
     
 Where ```labels.csv``` contains the ID, label and file pathway for each participant in your sample, which will be necessary for when you are training and evaluating your model.
     
-### 5. Prepare your script
+## 5. Prepare your script
 Put together your ```python``` script or ```Jupyter``` notebook. Some important considerations here include the model architecture given the task at hand and the type of data augmentation to apply during training, which can help reduce the risk of overfitting to your training set. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug your script. For some example scripts for Segmentation and Classification using the MONAI framework here. 
 
 If you are using Google Colab or an equivalent and want to test your code, it's advisable to use publicly available data. Some examples include IXI dataset or OASIS.
 
-### 6. Move your script to cluster
+## 6. Move your script to cluster
 Once you’re happy that things generally work – the next step is to import your script to the cluster. 
 There are several ways to do this (e.g., ```rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:    
 1. Type the following into a new terminal (replace username with your details):
