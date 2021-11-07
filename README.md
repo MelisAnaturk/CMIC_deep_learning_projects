@@ -1,7 +1,7 @@
 # Kick starting your deep learning project on CMIC's HPC cluster
 
 ## 1. Introduction
-This page provides some tips on getting started with projects that aim to apply deep learning to MRI data. It also includes specific instructions on how to set things up on UCL CMIC HPC cluster (i.e. ```comic```) for new starters. Please note that there is a bit of overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
+This page provides some tips on getting started with projects that aim to apply deep learning to MRI data. It also includes specific instructions on how to set things up on UCL Centre for Medical Image Computing (CMIC) high-performance computing (HPC) cluster (i.e. ```comic```) for new starters. Please note that there is a bit of overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
 
 ***Disclaimer: The information available on this page is by no means exhaustive and may eventually become outdated. If you do find any mistakes or inaccuracies please do get in touch with me at melis.anaturk.14@ucl.ac.uk or create a pull request.***
 
@@ -35,16 +35,16 @@ Useful packages to be aware of:
 3. Torch I/0: image processing and data augmentation
 
 ## 3. Getting started on the cluster
-You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e., ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
+You can find advice on working with the HPC cluster (i.e., ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
 
-1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
+1. Setting up an account 
 3. Familiarise yourself with the Sun Grid Engine (SGE)
-4. Understand best practices for submitting GPU jobs on the cluster
-5. Ensure you have enough scratch space to host your data (!) and otherwise liase with your line manager/superviser to request more scratch space
+4. Understanding cluster use etiquette
+5. Data storage
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
-4. Install a copy of all of the python packages needed for your DL job using ```pip``` or ```pip3```.  First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g.,“requirements.txt”):
+4. Install a copy of all of the python packages needed for your deep learning project using ```pip``` or ```pip3```.  First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g., “requirements.txt”):
 ```
 ...
 Markdown==3.3.3
@@ -72,7 +72,7 @@ Once you have an exhaustive list of packages, run the following in your command 
 
 ## 4. Downloading and organising your data 
 ### 4.1 Importing/downloading data
-Getting data onto the cluster is a straight forward process. For example you use ```wget``` for publicly available dataset e.g. for IXI data:    
+Getting data onto the cluster is a straight forward process. For example you can use ```wget``` for publicly available dataset e.g. for IXI data:    
 ``` 
 wget -cq http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar 
 wget http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI.xls
@@ -83,7 +83,8 @@ For researchers with approved UK Biobank projects: specific instructions on down
 You can also import a copy onto the cluster using ```scp``` (example provided below). 
  
 ### 4.2 Organisation of data directory
-I's worth spending some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
+It is important to spend some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
+
 For example, if predicting whether an individual belongs to a specific category (e.g., female/male, patient/control) you could organise it as follows:
  
 ```
