@@ -8,19 +8,26 @@ Deep learning is a subfield of Machine learning where algorithms are structured 
 
 ### 2.1 Some example projects where deep learning models have been applied:
 2.1.1 Automated brain segmentation (e.g., SynthSeg)
+
 2.1.2 Building predictive models of biological 'brain age' (e.g., SFCN based on T1-weighted images)
+
 2.1.3 Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
 
 ### 2.2 Resources 
 While an in-depth introduction is beyond the scope of this page, I would highly recommend checking out several excellent resources that have previously been published on the topic:
 
 2.2.1 Brief introductory article on deep learning
+
 2.2.2 Neural Networks and Deep learning course run by Andrew Ng on Coursera
+
 2.2.3 Deep learning (Goodfellow, et al. 2016)
 
 2.2.4 You may also be able to request to audit the following courses (UCL staff and students only):
+
 MPHY0025: Information Processing in Medical Imaging (contact: James Cole, james.cole@ucl.ac.uk)
+
 MPHY0041: Machine Learning in Medical Imaging (contact: Andre Altmann, a.altmann@ucl.ac.uk)
+
 COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
 ### 2.3 Getting started
