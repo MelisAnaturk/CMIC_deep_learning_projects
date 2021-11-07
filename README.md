@@ -1,15 +1,7 @@
 # Kick starting your deep learning project on CMIC's HPC cluster
 
-Contents
-1. Introduction
-2. General overview of deep learning
-3. Getting started on ```comic```
-4. Downloading and organising your data 
-5. 
-
 ## 1. Introduction
 This page provides some tips on getting started with projects that aim to apply deep learning to MRI data. It also includes specific instructions on how to set things up on UCL CMIC HPC cluster (i.e. ```comic```) for new starters. Please note that there is a bit of overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
-
 ***Disclaimer: The information available on this page is by no means exhaustive and may eventually become outdated. If you do find any mistakes or inaccuracies please do get in touch with me at melis.anaturk.14@ucl.ac.uk or create a pull request.***
 
 ## 2. General overview of deep learning
