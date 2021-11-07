@@ -31,6 +31,7 @@ Useful packages to be aware of:
 2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
     2.1 Introduction to Tensorflow and biomedical imaging analysis    
     2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
+3. Torch I/0: image processing and data augmentation
 
 ## 3. Getting started on the cluster
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e., ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
