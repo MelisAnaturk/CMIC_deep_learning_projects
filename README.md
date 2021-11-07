@@ -26,7 +26,7 @@ You may also be able to request to audit the following courses (*UCL staff and s
 3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
 Useful packages to be aware of:
-1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging: 
+1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging:
     1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)   
     1.2 Various tutorials on 2D and 3D classification and segmentation examples    
 2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
