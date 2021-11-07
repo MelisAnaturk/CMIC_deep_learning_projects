@@ -21,9 +21,9 @@ An in-depth introduction to deep learning is beyond the scope of this page as th
 4. An overview of deep learning models and their applications to MRI images (cite)
 
 You may also be able to request to audit the following courses (*UCL staff and students only*):
-1. MPHY0025: Information Processing in Medical Imaging (contact: James Cole, james.cole@ucl.ac.uk)
-2. MPHY0041: Machine Learning in Medical Imaging (contact: Andre Altmann, a.altmann@ucl.ac.uk)
-3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
+> 1. MPHY0025: Information Processing in Medical Imaging (contact: James Cole, james.cole@ucl.ac.uk)
+> 2. MPHY0041: Machine Learning in Medical Imaging (contact: Andre Altmann, a.altmann@ucl.ac.uk)
+> 3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
 Useful packages to be aware of:
 1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging:
