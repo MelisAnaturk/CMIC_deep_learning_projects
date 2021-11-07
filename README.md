@@ -77,14 +77,17 @@ Put together your python script or Jupyter notebook - Google Colab is a good sta
 There are several ways to do this (e.g., ``rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:
 ### 2.6 Move your script to cluster
 1. Type the following into a new terminal (replace username with your details):
+  
   ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
 2. Then type the following into another terminal (logged into the cluster):
+  
   ```scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts```
 
 ### 2.7 Submit bash script to SGE scheduler or request an interactive session
 ```example.sh```  contains an example script that you can use to submit your DL job
 
  If you need a short interactive session for debugging you can request using ```qrsh```:
+  
  ``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2```
   
 ### 2.8 Evaluating model performance
@@ -92,8 +95,10 @@ You can monitor the progress of training through plots of your learning curve of
 
 Unfortunately, there isn’t a way to view your plots in the cluster (that I’m aware of), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
+  
   ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
 2. In another terminal (make sure you are not logged into the cluster):
+  
 ```scp -P 2222 username@localhost:/home/username/plot.pdf /Users/ExampleName/deep_learning_project/```
 
 ### 2.8 Once you are set up on the cluster
