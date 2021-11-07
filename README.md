@@ -102,7 +102,7 @@ For example, if predicting whether an individual belongs to a specific category 
      ...
      └── Sub_103_T1.nii.gz
 ```
-
+Alternatively, if you are predicting a continuous variable (e.g., age), then you could organise your data directory follows:
   
 ```
 .    
@@ -117,7 +117,7 @@ For example, if predicting whether an individual belongs to a specific category 
 │   └── T1.nii.gz
 ``` 
     
-You will need a directory containing all of your input data (e.g., T1 images) and a .csv file that contains the ID, label and file pathway for each person in your sample
+In a seperate ```labels.csv```, you will need to include the ID, label and file pathway for each participant in your sample.
     
 ### 5. Prepare your script
 Put together your python script or Jupyter notebook - Google Colab is a good starting point to do an initial debug of your script. You can download publicly available images for this step e.g., IXI data. Once you’re happy that things generally work – you can import your script to the cluster. 
