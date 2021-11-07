@@ -41,10 +41,10 @@ Useful packages to be aware of:
 ## 3. Getting started on the cluster
 You can find advice on working with the HPC cluster (i.e., ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
 
-1. Setting up an account 
-3. Familiarise yourself with the Sun Grid Engine (SGE)
-4. Understanding cluster use etiquette
-5. Data storage
+> 1. Setting up an account 
+> 2. Familiarise yourself with the Sun Grid Engine (SGE)
+> 3. Understanding cluster use etiquette
+> 4. Data storage
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
