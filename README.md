@@ -14,7 +14,7 @@ Deep learning is a subfield of Machine learning (ML) where algorithms consisting
 3. Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
 
 ### 2.2 Resources 
-An in-depth introduction to deep learning is beyond the scope of this page as there are already several excellent resources that are publicly available on topic:
+An in-depth introduction to deep learning is beyond the scope of this page as there are already several excellent resources available on topic:
 1. [Brief introductory article on deep learning](https://machinelearningmastery.com/what-is-deep-learning/)
 2. [Neural Networks and Deep learning course run by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=gg&utm_medium=sem&utm_campaign=17-DeepLearning-ROW&utm_content=17-DeepLearning-ROW&campaignid=6465471773&adgroupid=77656689495&device=c&keyword=online%20deep%20learning%20classes&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=506750650449&hide_mobile_promo&gclid=Cj0KCQjw8p2MBhCiARIsADDUFVEMeZx6yWRlU9yi0BUlTKpULy8GdWxtVtbJB62kIOIpwm5CAfLQzcsaAtU7EALw_wcB)
 3. [Deep learning (Goodfellow, et al. 2016)](https://www.deeplearningbook.org/)
