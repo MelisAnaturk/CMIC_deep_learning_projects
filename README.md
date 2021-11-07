@@ -1,5 +1,12 @@
 # A guide to kick starting your deep learning project on UCL CMIC's HPC cluster
 
+Contents
+1. Introduction
+2. General overview of deep learning
+3. Getting started on comic
+4. Downloading and organising your data 
+5. 
+
 ## 1. Introduction
 This page provides some tips on getting started with projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster (i.e. ```comic```) for new starters. Note that there is quite an overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
 
@@ -33,8 +40,8 @@ Useful packages to be aware of:
     2.1 Introduction to Tensorflow and biomedical imaging analysis    
     4.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
 
-## 3. Getting started
-You can find advice on working with the Computer Science high-performance computing (HPC) cluster here. This includes links for things like:
+## 3. Getting started on Comic
+You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e. ```comic```) here. This includes links for things like:
 
 1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
 2. Familiarise yourself with the Sun Grid Engine (SGE)
@@ -69,7 +76,7 @@ Once you have an exhaustive list of packages, run the following in your command 
 
 **Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.**
 
-## 4. Downloading and organising your data and create a csv file of labels
+## 4. Downloading and organising your data 
 ### 4.1 Importing/downloading data
 Getting data onto the cluster is a straight forward process. For example you use ```wget``` for publicly available dataset e.g. for IXI data:    
 ``` 
@@ -116,11 +123,11 @@ Alternatively, if you are predicting a continuous variable (e.g., age), then you
 Where ```labels.csv``` contains the ID, label and file pathway for each participant in your sample, which will be necessary for when you are training and evaluating your model.
     
 ### 5. Prepare your script
-Put together your ```model_training.py``` or Jupyter notebook. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug of your script. For some example scripts, see:
-X
-X
-X
-You can download publicly available images to test your model e.g., IXI data. Once you’re happy that things generally work – you can import your script to the cluster. 
+Put together your ```python``` script or ```Jupyter``` notebook. Some important considerations here are appropriate neural network architecture for the task at hand and the type of data augmentation you plan to apply to the images, which can help reduce the risk of overfitting to your training set. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug of your script. For some example scripts for Segmentation and Classification using the MONAI framework here. 
+
+If you are using Google Colab or an equivalent and want to test your code, it's advisable to use publicly available data. Some examples include IXI dataset or OASIS.
+    
+Once you’re happy that things generally work – the next step is to import your script to the cluster. 
 
 There are several ways to do this (e.g., ``rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:
 ### 6. Move your script to cluster
@@ -138,6 +145,8 @@ There are several ways to do this (e.g., ``rsync```), but I tend to use ```scp``
  If you need a short interactive session for debugging you can request using ```qrsh```:
   
  ``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2```
+ 
+ 
   
 ## 8. Evaluating model performance
 You can monitor the progress of training through plots of your learning curve of your model
@@ -149,11 +158,4 @@ Unfortunately, there isn’t a way to view your plots in the cluster (that I’m
 2. In another terminal (make sure you are not logged into the cluster):
   
 ```scp -P 2222 username@localhost:/home/username/plot.pdf /Users/ExampleName/deep_learning_project/```
-
-## 9 Once you are set up on the cluster
-Example datasets to run through deep learning tutorials:
-IXI: T1-weighted, T2-weighted and DTI images from 600 healthy individuals (ages 20-90)
-OASIS-1: T1-weighted images from 416 participants (ages: 18-96, healthy and clinically diagnosed with mild-to-moderate AD)
-Loading and preprocessing your images
-
 
