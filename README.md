@@ -26,13 +26,11 @@ You may also be able to request to audit the following courses (*UCL staff and s
 ### 2.3 Getting started
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster here. This includes links for things like:
 
-1. Setting up an account
+1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
 2. Familiarise yourself with the Sun Grid Engine (SGE)
-3. Submitting GPU jobs on the cluster
-
-```To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.```
-
-2.3.3 Install a copy of all python packages needed for your DL job, by preparing a text file that contains a list of all required packages saved on your scratch (e.g.,“requirements.txt”):
+3. Understand best practices for submitting GPU jobs on the cluster
+**Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
+4. Install a copy of all of the python packages needed for your DL job using ```pip```.  First, prepare a text file that contains a list of all required packages (in the following format: <package_name>==<version>) and save this to your scratch (e.g.,“requirements.txt”):
 
 ```
 ...
@@ -59,7 +57,46 @@ Once you have an exhaustive list of packages, run the following in your command 
 
 ***Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.***
 
-### 2.4 Once you are set up on the cluster
+## 2.4 Organise your data and create a csv file of labels
+It's worth spending some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
+  
+Data download:
+  wget
+  biobank specific instructions
+  importing using 
+  
+Here are a couple of examples:
+<example>
+
+As a general rule of thumb, you will need a directory containing all of your input data (e.g., T1 images) and a .csv file that contains the ID, label and file pathway for each person in your sample:
+<include example here>
+ 
+### 2.5 Prepare your script
+Put together your python script or Jupyter notebook - Google Colab is a good starting point to do an initial debug of your script. You can download publicly available images for this step e.g., IXI data. Once you’re happy that things generally work – you can import your script to the cluster. 
+
+There are several ways to do this (e.g., ``rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:
+### 2.6 Move your script to cluster
+1. Type the following into a new terminal (replace username with your details):
+  ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
+2. Then type the following into another terminal (logged into the cluster):
+  ```scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts```
+
+### 2.7 Submit bash script to SGE scheduler or request an interactive session
+```example.sh```  contains an example script that you can use to submit your DL job
+
+ If you need a short interactive session for debugging you can request using ```qrsh```:
+ ``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2```
+  
+### 2.8 Evaluating model performance
+You can monitor the progress of training through plots of your learning curve of your model
+
+Unfortunately, there isn’t a way to view your plots in the cluster (that I’m aware of), so you will need to copy this onto your local desktop. To do this:
+1. Type the following into a new command line terminal (replace username with your details):
+  ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
+2. In another terminal (make sure you are not logged into the cluster):
+```scp -P 2222 username@localhost:/home/username/plot.pdf /Users/ExampleName/deep_learning_project/```
+
+### 2.8 Once you are set up on the cluster
 Example datasets to run through deep learning tutorials:
 IXI: T1-weighted, T2-weighted and DTI images from 600 healthy individuals (ages 20-90)
 OASIS-1: T1-weighted images from 416 participants (ages: 18-96, healthy and clinically diagnosed with mild-to-moderate AD)
@@ -70,5 +107,4 @@ Series of videos from a 2-day bootcamp introduction to MONAI (2020)
 Various tutorials on 2D and 3D classification and segmentation examples
 Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
 Introduction to Tensorflow and biomedical imaging analysis
-
 Several tutorials covering the basics of reading in images, data augmentation and building a model
