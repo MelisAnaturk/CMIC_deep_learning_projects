@@ -27,6 +27,9 @@ COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster here. This includes links for things like:
 
 2.3.1 Setting up an account
+
+2.3.2 Familiarise yourself with the Sun Grid Engine (SGE)
+
 2.3.2 Submitting GPU jobs on the cluster
 
 ```To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.```
