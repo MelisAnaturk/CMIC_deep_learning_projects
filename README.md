@@ -1,4 +1,4 @@
-# A guide to kick starting your deep learning project on UCL CMIC's HPC cluster
+# A guide to kick starting your deep learning project on CMIC's HPC cluster
 
 Contents
 1. Introduction
