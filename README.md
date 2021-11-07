@@ -36,7 +36,7 @@ Useful packages to be aware of:
     
     4.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
 
-### 2.3 Getting started
+## 2.3 Getting started
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster here. This includes links for things like:
 
 1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
