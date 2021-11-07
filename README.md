@@ -62,6 +62,7 @@ msgpack==1.0.2
 ...
 ```
 Once you have an exhaustive list of packages, run the following in your command line:
+
 ```python3 -m pip install -r requirements.txt --user ***username****```
 
 ***Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.***
