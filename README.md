@@ -1,7 +1,7 @@
 # A guide to kick starting your deep learning project on UCL CMIC's HPC cluster
 
 ## 1. Introduction
-This page provides some tips on getting started with projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster for new starters. Note that there is quite an overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
+This page provides some tips on getting started with projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster (i.e. ```comic```) for new starters. Note that there is quite an overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
 
 ***Disclaimer: This is by no means an exhaustive introduction and the information available on this page may become outdated. If you do find any mistakes or inaccuracies please do get in touch with me at melis.anaturk.14@ucl.ac.uk or create a pull request.***
 
@@ -69,7 +69,7 @@ msgpack==1.0.2
 
 Once you have an exhaustive list of packages, run the following in your command line:
 
-```python3 -m pip install -r requirements.txt --user ***username****```
+```python3 -m pip install -r requirements.txt --user your_username```
 
 **Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.**
 
