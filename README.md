@@ -7,37 +7,28 @@ This page provides a list of resources to get you started on projects that aim t
 Deep learning is a subfield of Machine learning where algorithms are structured into layers of nodes or "neurons", otherwise refer "neural networks" (consisting of an input layer, hidden layers and output layer, see example below). While classical machine learning requires features to already be extracted from the images (e.g., FreeSurfer measures of cortical thickness, surface area and cortical/subcortical volumes), deep learning models are able to **learn the features** directly to the raw images, without human intervention. Deep learning models have led to some of the most accurate predictions..
 
 ### 2.1 Some example projects where deep learning models have been applied:
-2.1.1 Automated brain segmentation (e.g., SynthSeg)
-
-2.1.2 Building predictive models of biological 'brain age' (e.g., SFCN based on T1-weighted images)
-
-2.1.3 Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
+1. Automated brain segmentation (e.g., SynthSeg)
+2. Building predictive models of biological 'brain age' (e.g., SFCN based on T1-weighted images)
+3. Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
 
 ### 2.2 Resources 
 While an in-depth introduction is beyond the scope of this page, I would highly recommend checking out several excellent resources that have previously been published on the topic:
 
-2.2.1 Brief introductory article on deep learning
+1. Brief introductory article on deep learning
+2. Neural Networks and Deep learning course run by Andrew Ng on Coursera
+3. Deep learning (Goodfellow, et al. 2016)
 
-2.2.2 Neural Networks and Deep learning course run by Andrew Ng on Coursera
-
-2.2.3 Deep learning (Goodfellow, et al. 2016)
-
-2.2.4 You may also be able to request to audit the following courses (UCL staff and students only):
-
-MPHY0025: Information Processing in Medical Imaging (contact: James Cole, james.cole@ucl.ac.uk)
-
-MPHY0041: Machine Learning in Medical Imaging (contact: Andre Altmann, a.altmann@ucl.ac.uk)
-
-COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
+You may also be able to request to audit the following courses (*UCL staff and students only*):
+1. MPHY0025: Information Processing in Medical Imaging (contact: James Cole, james.cole@ucl.ac.uk)
+2. MPHY0041: Machine Learning in Medical Imaging (contact: Andre Altmann, a.altmann@ucl.ac.uk)
+3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
 ### 2.3 Getting started
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster here. This includes links for things like:
 
-2.3.1 Setting up an account
-
-2.3.2 Familiarise yourself with the Sun Grid Engine (SGE)
-
-2.3.2 Submitting GPU jobs on the cluster
+1. Setting up an account
+2. Familiarise yourself with the Sun Grid Engine (SGE)
+3. Submitting GPU jobs on the cluster
 
 ```To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.```
 
@@ -61,6 +52,7 @@ mpmath==1.1.0
 msgpack==1.0.2
 ...
 ```
+
 Once you have an exhaustive list of packages, run the following in your command line:
 
 ```python3 -m pip install -r requirements.txt --user ***username****```
