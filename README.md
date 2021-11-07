@@ -1,4 +1,4 @@
-# A guide to kick starting your deep learning project on CMIC's HPC cluster
+# Kick starting your deep learning project on CMIC's HPC cluster
 
 Contents
 1. Introduction
