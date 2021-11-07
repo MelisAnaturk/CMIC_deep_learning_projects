@@ -76,11 +76,11 @@ Once you have an exhaustive list of packages, run the following in your command 
 ## 4. Downloading and organising your data and create a csv file of labels
 ### 4.1 Importing/downloading data
 Getting data onto the cluster is a straight forward process. For example you use ```wget``` for publicly available dataset e.g. for IXI data:    
-
-    ``` 
+``` 
 wget -cq http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar 
 wget http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI.xls
 ```
+
 For researchers with approved UK Biobank projects: specific instructions on downloading 'bulk data' using helper programs (e.g. ```ukbfetch```) are available at this link.
 
 You can also import a copy onto the cluster using ```scp``` (example provided below). 
