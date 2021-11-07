@@ -9,16 +9,16 @@ This page provides some tips on getting started with projects that aim to apply 
 Deep learning is a subfield of Machine learning (ML) where algorithms consisting of a series of layers (i.e. an input layer, hidden layers and output layer, otherwise referred to the algorithms "architecture") are trained to complete specific tasks, such as making predictions or classifications about data. While classical ML (e.g., random forests, elastic net) require features to already be extracted from MRI images (e.g., FreeSurfer measures of cortical thickness, surface area and cortical/subcortical volumes), deep learning algorthims are able to **learn the features** directly from raw images, without the need for preprocessing the data beforehand. Deep learning algorthims often (but not necessarily always!) outperform classifical ML methods in a range of tasks.
 
 ### 2.1 Some example projects where deep learning models have been applied:
-1. Automated brain segmentation (e.g., SynthSeg)
-2. Building predictive models of biological 'brain age' (e.g., SFCN based on T1-weighted images)
-3. Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
+> 1. Automated brain segmentation (e.g., SynthSeg)
+> 2. Building predictive models of biological 'brain age' (e.g., SFCN based on T1-weighted images)
+> 3. Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
 
 ### 2.2 Resources 
 An in-depth introduction to deep learning is beyond the scope of this page as there are already several excellent resources available on topic:
-1. [Brief introductory article on deep learning](https://machinelearningmastery.com/what-is-deep-learning/)
-2. [Neural Networks and Deep learning course run by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=gg&utm_medium=sem&utm_campaign=17-DeepLearning-ROW&utm_content=17-DeepLearning-ROW&campaignid=6465471773&adgroupid=77656689495&device=c&keyword=online%20deep%20learning%20classes&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=506750650449&hide_mobile_promo&gclid=Cj0KCQjw8p2MBhCiARIsADDUFVEMeZx6yWRlU9yi0BUlTKpULy8GdWxtVtbJB62kIOIpwm5CAfLQzcsaAtU7EALw_wcB)
-3. [Deep learning (Goodfellow, et al. 2016)](https://www.deeplearningbook.org/)
-4. An overview of deep learning models and their applications to MRI images (cite)
+> 1. [Brief introductory article on deep learning](https://machinelearningmastery.com/what-is-deep-learning/)
+> 2. [Neural Networks and Deep learning course run by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=gg&utm_medium=sem&utm_campaign=17-DeepLearning-ROW&utm_content=17-DeepLearning-ROW&campaignid=6465471773&adgroupid=77656689495&device=c&keyword=online%20deep%20learning%20classes&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=506750650449&hide_mobile_promo&gclid=Cj0KCQjw8p2MBhCiARIsADDUFVEMeZx6yWRlU9yi0BUlTKpULy8GdWxtVtbJB62kIOIpwm5CAfLQzcsaAtU7EALw_wcB)
+> 3. [Deep learning (Goodfellow, et al. 2016)](https://www.deeplearningbook.org/)
+> 4. An overview of deep learning models and their applications to MRI images (cite)
 
 You may also be able to request to audit the following courses (*UCL staff and students only*):
 > 1. MPHY0025: Information Processing in Medical Imaging (contact: James Cole, james.cole@ucl.ac.uk)
@@ -26,17 +26,17 @@ You may also be able to request to audit the following courses (*UCL staff and s
 > 3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
 Useful packages to be aware of:
-1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging:
+> 1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging:
 
-    1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)   
-    1.2 Various tutorials on 2D and 3D classification and segmentation examples   
+ >   1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)   
+ >   1.2 Various tutorials on 2D and 3D classification and segmentation examples   
     
-2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
+> 2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
 
-    2.1 Introduction to Tensorflow and biomedical imaging analysis    
-    2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
+>    2.1 Introduction to Tensorflow and biomedical imaging analysis    
+>    2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
     
-3. Torch I/0: image processing and data augmentation
+> 3. Torch I/0: image processing and data augmentation
 
 ## 3. Getting started on the cluster
 You can find advice on working with the HPC cluster (i.e., ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
