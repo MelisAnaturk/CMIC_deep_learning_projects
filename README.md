@@ -1,9 +1,9 @@
-# A guide to kick starting a deep learning project on UCL CMIC's HPC cluster
+# A guide to kick starting your deep learning project on UCL CMIC's HPC cluster
 
 ## 1. Introduction
 This page provides some tips on getting started with projects that aim to apply deep learning models based on 3D medical images acquired using Magnetic Resonance Imaging (MRI). It also includes specific instructions on how to set things up on UCL CMIC HPC cluster for new starters. Note that there is quite an overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by myself & Sophie Martin).
 
-***Disclaimer: This is by no means an exhaustive introduction and the information on this page may at some point become outdated. If you do find any mistakes or inaccuracies please do get in touch @ melis.anaturk.14@ucl.ac.uk or create a pull request.***
+***Disclaimer: This is by no means an exhaustive introduction and the information available on this page may become outdated. If you do find any mistakes or inaccuracies please do get in touch with me at melis.anaturk.14@ucl.ac.uk or create a pull request.***
 
 ## 2. General overview of deep learning
 Deep learning is a subfield of Machine learning where algorithms are structured into layers of nodes or "neurons", otherwise refer "neural networks" (consisting of an input layer, hidden layers and output layer, see example below). While classical machine learning requires features to already be extracted from the images (e.g., FreeSurfer measures of cortical thickness, surface area and cortical/subcortical volumes), deep learning models are able to **learn the features** directly to the raw images, without human intervention. Deep learning models have led to some of the most accurate predictions..
@@ -15,7 +15,6 @@ Deep learning is a subfield of Machine learning where algorithms are structured 
 
 ### 2.2 Resources 
 An in-depth introduction to deep learning is beyond the scope of this page as there are already several excellent resources that are publicly available on topic:
-
 1. Brief introductory article on deep learning
 2. Neural Networks and Deep learning course run by Andrew Ng on Coursera
 3. Deep learning (Goodfellow, et al. 2016)
@@ -75,24 +74,39 @@ Once you have an exhaustive list of packages, run the following in your command 
 **Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.**
 
 ## 4. Downloading and organising your data and create a csv file of labels
-### 4.1 Getting data onto the cluster is a straight forward process. For example you use ```wget``` for publicly available dataset e.g. for IXI data:
-    
-``` 
+### 4.1 Importing/downloading data
+Getting data onto the cluster is a straight forward process. For example you use ```wget``` for publicly available dataset e.g. for IXI data:    
+
+    ``` 
 wget -cq http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar 
 wget http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI.xls
 ```
-    
-### 4.2 UK Biobank have specific instructions on downloading data using specific helper programs including ```ukbfetch```, with more information available here (REFERENCE).
-### 4.3 You can also import a copy onto the cluster. 
-    
+For researchers with approved UK Biobank projects: specific instructions on downloading 'bulk data' using helper programs (e.g. ```ukbfetch```) are available at this link.
+
+You can also import a copy onto the cluster using ```scp``` (example provided below). 
+ 
+### 4.2 Organisation of data directory
 I's worth spending some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
-If estimating the class of individual (e.g., female/male, patient/control) you could organise it as follows:
+For example, if predicting whether an individual belongs to a specific category (e.g., female/male, patient/control) you could organise it as follows:
  
 ```
+.    
+├── labels.csv   
+├── Females
+│    ├── Sub_101_T1.nii.gz
+│    ├── Sub_105_T1.nii.gz
+│    ...
+│    └── Sub_N_T1.nii.gz
+└── Males
+     ├── Sub_101_T1.nii.gz
+     ...
+     └── Sub_103_T1.nii.gz
 ```
 
   
-```   
+```
+.    
+├── labels.csv  
 ├── Sub_101
 │   └── T1.nii.gz
 ├── Sub_102
