@@ -133,11 +133,12 @@ There are several ways to do this (e.g., ```rsync```), but I tend to use ```scp`
 
  If you need a short interactive session for debugging you can request using ```qrsh```:
  
-``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2```
-Where this line would request 2 gpus for 30 minutes (max tmem of 4G).
-    
+``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 1``` ### CHECK THIS
+
+This command will log you into a GPU node for 30 minutes and allow you to use up to 4G of memory.
+   
 ## 8. Evaluating model performance
-You can monitor the progress of training through plots of your learning curve of your model..
+You can monitor the progress of training through learning curves of your model. Several ways to do this, including using the interactive dashboard created by ```TensorFlow``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib```.
 
 Unfortunately, there isn’t a way to view your plots in the cluster (that I’m aware of), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
