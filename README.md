@@ -26,15 +26,11 @@ You may also be able to request to audit the following courses (*UCL staff and s
 
 Useful packages to be aware of:
 1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging: 
-
-    1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)
-    
+    1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)   
     3.2 Various tutorials on 2D and 3D classification and segmentation examples
     
 2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
-
-    2.1 Introduction to Tensorflow and biomedical imaging analysis
-    
+    2.1 Introduction to Tensorflow and biomedical imaging analysis    
     4.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
 
 ## 3. Getting started
@@ -117,10 +113,14 @@ Alternatively, if you are predicting a continuous variable (e.g., age), then you
 │   └── T1.nii.gz
 ``` 
     
-In a seperate ```labels.csv```, you will need to include the ID, label and file pathway for each participant in your sample.
+Where ```labels.csv``` contains the ID, label and file pathway for each participant in your sample, which will be necessary for when you are training and evaluating your model.
     
 ### 5. Prepare your script
-Put together your python script or Jupyter notebook - Google Colab is a good starting point to do an initial debug of your script. You can download publicly available images for this step e.g., IXI data. Once you’re happy that things generally work – you can import your script to the cluster. 
+Put together your ```model_training.py``` or Jupyter notebook. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug of your script. For some example scripts, see:
+X
+X
+X
+You can download publicly available images to test your model e.g., IXI data. Once you’re happy that things generally work – you can import your script to the cluster. 
 
 There are several ways to do this (e.g., ``rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:
 ### 6. Move your script to cluster
