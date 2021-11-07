@@ -41,8 +41,9 @@ You can find advice on working with the Computer Science high-performance comput
 
 ```To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.```
 
-2.3.3 Install a copy of all python packages needed for your DL job, by preparing a text file that contains a list of all required packages saved on your scratch (e.g.,“requirements.txt”)<img width="1431" alt="image" src="https://user-images.githubusercontent.com/48325280/140652417-ef9ddee5-a3e1-4794-a0d3-500765167a83.png">
+2.3.3 Install a copy of all python packages needed for your DL job, by preparing a text file that contains a list of all required packages saved on your scratch (e.g.,“requirements.txt”)
 
+<img width="181" alt="image" src="https://user-images.githubusercontent.com/48325280/140652449-fb26369f-3fed-4eef-a83a-a01fb65545b0.png">
 
 ### 2.4 Once you are set up on the cluster
 Example datasets to run through deep learning tutorials:
