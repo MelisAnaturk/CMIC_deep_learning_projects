@@ -42,7 +42,9 @@ You can find advice on working with the Computer Science high-performance comput
 1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
 2. Familiarise yourself with the Sun Grid Engine (SGE)
 3. Understand best practices for submitting GPU jobs on the cluster
+
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
+
 4. Install a copy of all of the python packages needed for your DL job using ```pip```.  First, prepare a text file that contains a list of all required packages (in the following format: <package_name>==<version>) and save this to your scratch (e.g.,“requirements.txt”):
 
 ```
@@ -68,7 +70,7 @@ Once you have an exhaustive list of packages, run the following in your command 
 
 ```python3 -m pip install -r requirements.txt --user ***username****```
 
-***Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.***
+**Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.**
 
 ## 2.4 Organise your data and create a csv file of labels
 It's worth spending some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
