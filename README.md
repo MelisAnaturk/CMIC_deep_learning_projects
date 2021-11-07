@@ -3,7 +3,7 @@
 Contents
 1. Introduction
 2. General overview of deep learning
-3. Getting started on comic
+3. Getting started on ```comic```
 4. Downloading and organising your data 
 5. 
 
@@ -40,12 +40,12 @@ Useful packages to be aware of:
     2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
 
 ## 3. Getting started on Comic
-You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e. ```comic```) here. This includes links for things like:
+You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e. ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
 
 1. Setting up an account and do a CMIC HPC induction (contact cluster-accounts@cs.ucl.ac.uk to request a sesssion)
-2. Familiarise yourself with the Sun Grid Engine (SGE)
-3. Understand best practices for submitting GPU jobs on the cluster
-4. Ensure you have enough scratch space to host your data (!) and otherwise liase with your line manager/superviser to request more scratch space
+3. Familiarise yourself with the Sun Grid Engine (SGE)
+4. Understand best practices for submitting GPU jobs on the cluster
+5. Ensure you have enough scratch space to host your data (!) and otherwise liase with your line manager/superviser to request more scratch space
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
