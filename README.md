@@ -43,6 +43,7 @@ You can find advice on working with the Computer Science high-performance comput
 
 2.3.3 Install a copy of all python packages needed for your DL job, by preparing a text file that contains a list of all required packages saved on your scratch (e.g.,“requirements.txt”):
 
+<p align="center">
 ```
 ...
 Markdown==3.3.3
@@ -60,9 +61,8 @@ moviepy==0.2.3.5
 mpmath==1.1.0
 msgpack==1.0.2
 ...
-
 ```
-
+</p>
 
 ### 2.4 Once you are set up on the cluster
 Example datasets to run through deep learning tutorials:
