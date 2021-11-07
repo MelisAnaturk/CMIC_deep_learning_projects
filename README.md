@@ -34,11 +34,10 @@ You may also be able to request to audit the following courses (*UCL staff and s
 Useful packages to be aware of:
 1. MONAI: a PyTorch-based, open-source framework for deep learning in healthcare imaging: 
     1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)   
-    3.2 Various tutorials on 2D and 3D classification and segmentation examples
-    
+    1.2 Various tutorials on 2D and 3D classification and segmentation examples    
 2. Deep Learning Tool Kit (DLTK): an open-source deep learning library for medical imaging:
     2.1 Introduction to Tensorflow and biomedical imaging analysis    
-    4.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
+    2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
 
 ## 3. Getting started on Comic
 You can find advice on working with the Computer Science high-performance computing (HPC) cluster (i.e. ```comic```) here. This includes links for things like:
