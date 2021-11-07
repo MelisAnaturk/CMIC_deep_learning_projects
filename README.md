@@ -75,12 +75,15 @@ Once you have an exhaustive list of packages, run the following in your command 
 **Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.**
 
 ## 4. Downloading and organising your data and create a csv file of labels
-4.1 Getting data onto the cluster is a straight forward process. For example you can you ```wget``` for publicly available data. E.g. for IXI data:
-
-``` wget ```
-4.2 UK Biobank have specific instructions on downloading data using specific helper programs including ```ukbfetch```, with more infromation available here (REFERENCE).
-
-4.3  You can also import a copy onto the cluster. 
+### 4.1 Getting data onto the cluster is a straight forward process. For example you use ```wget``` for publicly available dataset e.g. for IXI data:
+    
+``` 
+wget -cq http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar 
+wget http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI.xls
+```
+    
+### 4.2 UK Biobank have specific instructions on downloading data using specific helper programs including ```ukbfetch```, with more information available here (REFERENCE).
+### 4.3 You can also import a copy onto the cluster. 
     
 I's worth spending some time thinking about the overall structure of your data directory once you've downloaded or imported it onto the cluster. 
 If estimating the class of individual (e.g., female/male, patient/control) you could organise it as follows:
