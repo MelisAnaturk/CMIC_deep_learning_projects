@@ -25,7 +25,7 @@ You may also be able to request to audit the following courses (*UCL staff and s
 > 2. MPHY0041: Machine Learning in Medical Imaging (contact: Andre Altmann, a.altmann@ucl.ac.uk)
 > 3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
-It's also useful to understand these open-source deep learning libraries that are designed for medical imaging:
+I would also recommend familiarising yourself with these open-source deep learning libraries designed for medical imaging:
 1. MONAI (```Pytorch``` based):
 >   1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)   
 >   1.2 Various tutorials on 2D and 3D classification and segmentation examples   
