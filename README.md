@@ -46,7 +46,7 @@ You can find advice on working with the HPC cluster (i.e., ```comic```) here and
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
-4. Install a copy of all of the python packages needed for your deep learning project using ```pip``` or ```pip3```.  First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g., “requirements.txt”):
+After setting up your account and logging into comic, you will need to install a copy of all of the python packages needed for your deep learning project using ```pip``` or ```pip3``` (Generally, ```anaconda``` isn't advised for setting up an environment on the cluster).  First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g., “requirements.txt”):
 ```
 ...
 Markdown==3.3.3
