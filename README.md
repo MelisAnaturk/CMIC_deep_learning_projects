@@ -129,12 +129,12 @@ If you are using Google Colab or an equivalent and want to test your code, it's 
 ## 6. Move your script to cluster
 Once you’re happy that things generally work – the next step is to import your script to the cluster. 
 There are several ways to do this (e.g., ```rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:    
-1. Type the following into a new terminal (replace username with your details):
+1. Type the following into a new terminal (replace ```username``` with your details). This command sets up a port forward to allow you connect to comic (i.e., a login node) via tails (i.e., a jump node):
 ```
 ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk
 ```
   
-2. Then type the following into another terminal (logged into the cluster):
+2. Then type the following into another terminal (logged into the cluster) to import your script to comic.
 ```
 scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts
 ```
