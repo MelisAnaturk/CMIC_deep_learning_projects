@@ -82,7 +82,7 @@ wget -cq http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-T1.tar
 wget http://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI.xls
 ```
 
-For researchers with approved UK Biobank projects: specific instructions on downloading 'bulk data' using helper programs (e.g. ```ukbfetch```) are available at this link.
+For researchers with approved UK Biobank projects: specific instructions on downloading 'bulk data' using helper programs (e.g. ```ukbfetch```) are available at this [link](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi9iZXv1JL0AhX9RvEDHU-MBxgQFnoECAMQAQ&url=https%3A%2F%2Fbiobank.ndph.ox.ac.uk%2Fukb%2Fukb%2Fdocs%2Fukbfetch_instruct.html&usg=AOvVaw3j4iVPsAU93qcCHRYjSJlP).
 
 You can also import a copy onto the cluster using ```scp``` (example provided below). 
  
@@ -153,7 +153,7 @@ This command requests two GPUs for 30 minutes to use up to 4G of memory.
 ## 8. Evaluating model performance
 You can monitor the progress of training through learning curves of your model. Several ways to do this, including using the interactive dashboard created by ```TensorFlow``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib```.
 
-Unfortunately, there isn’t a way to view your plots in the cluster (that I’m aware of), so you will need to copy this onto your local desktop. To do this:
+Unfortunately, there isn’t a way to view your plots when logged into the cluster (as far as I’m aware), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
   
   ```
