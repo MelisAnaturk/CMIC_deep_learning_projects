@@ -14,11 +14,11 @@ Deep learning is a subfield of Machine learning (ML) where algorithms consisting
 > 3. Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
 
 ### 2.2 Resources 
-An in-depth introduction to deep learning is beyond the scope of this page as there are already several excellent resources available on topic:
+While an in-depth introduction to deep learning is beyond the scope of this page, there are already several excellent resources available on topic:
 > 1. [Brief introductory article on deep learning](https://machinelearningmastery.com/what-is-deep-learning/)
 > 2. [Neural Networks and Deep learning course run by Andrew Ng on Coursera](https://www.coursera.org/specializations/deep-learning?utm_source=gg&utm_medium=sem&utm_campaign=17-DeepLearning-ROW&utm_content=17-DeepLearning-ROW&campaignid=6465471773&adgroupid=77656689495&device=c&keyword=online%20deep%20learning%20classes&matchtype=b&network=g&devicemodel=&adpostion=&creativeid=506750650449&hide_mobile_promo&gclid=Cj0KCQjw8p2MBhCiARIsADDUFVEMeZx6yWRlU9yi0BUlTKpULy8GdWxtVtbJB62kIOIpwm5CAfLQzcsaAtU7EALw_wcB)
 > 3. [Deep learning (Goodfellow, et al. 2016)](https://www.deeplearningbook.org/)
-> 4. An overview of deep learning models and their applications to MRI images (cite)
+> 4. [An overview of deep learning models and their applications to MRI images](https://www.sciencedirect.com/science/article/pii/S0939388918301181)
 
 You may also be able to request to audit the following courses (*UCL staff and students only*):
 > 1. MPHY0025: Information Processing in Medical Imaging (contact: James Cole, james.cole@ucl.ac.uk)
@@ -26,27 +26,29 @@ You may also be able to request to audit the following courses (*UCL staff and s
 > 3. COMP0090: Introduction to Deep Learning (contact: Yipeng Hu, yipeng.hu@ucl.ac.uk)
 
 I would also recommend familiarising yourself with these open-source deep learning libraries designed for medical imaging:
-1. MONAI (```Pytorch``` based):
->   1.1 Series of videos from a 2-day bootcamp introduction to MONAI (2020)   
->   1.2 Various tutorials on 2D and 3D classification and segmentation examples   
+1. MONAI (Medical Open Network for AI):
+>   1.1 Series of videos from a [2-day bootcamp](https://www.youtube.com/watch?v=2w86AIJ-oBg&list=PLtoSVSQ2XzyBro_Xs12cyerrGz4pEPylv&index=1) introducing MONAI (2020)   
+>   1.2 Various tutorials on [2D and 3D classification and segmentation](https://github.com/Project-MONAI/tutorials) examples   
     
-2. Deep Learning Tool Kit (DLTK, ```Tensorflow``` based):
->    2.1 Introduction to Tensorflow and biomedical imaging analysis    
->    2.2 Several tutorials covering the basics of reading in images, data augmentation and building a model
+2.  DLTK (Deep Learning Tool Kit):
+>    2.1 [Introduction to Tensorflow and biomedical imaging analysis](https://blog.tensorflow.org/2018/07/an-introduction-to-biomedical-image-analysis-tensorflow-dltk.html)   
+>    2.2 [Several tutorials covering the basics of reading in images, data augmentation and building a model](https://github.com/DLTK/DLTK/tree/master/examples/tutorials)
     
-3. Torch I/0: image processing and data augmentation
+3. TorchIO: [image processing and data augmentation](https://github.com/fepegar/torchio)
 
 ## 3. Getting started on the cluster
-You can find advice on working with the HPC cluster (i.e., ```comic```) here and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
+You can find advice on working with the HPC cluster (i.e., comic) [here](https://hpc.cs.ucl.ac.uk/) and https://github.com/UCL/ECON-CLUSTER. This includes links for things like:
 
 > 1. Setting up an account 
-> 2. Familiarise yourself with the Sun Grid Engine (SGE)
+> 2. Familiarising yourself with the Sun Grid Engine (SGE)
 > 3. Understanding cluster use etiquette
 > 4. Data storage
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
-After setting up your account and logging into comic, you will need to install a copy of all of the python packages needed for your deep learning project using ```pip``` or ```pip3``` (Generally, ```anaconda``` isn't advised for setting up an environment on the cluster).  First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g., “requirements.txt”):
+After setting up your account and logging into comic, you will need to install a copy of all of the python packages needed for your deep learning project using ```pip``` or ```pip3``` (Generally, ```Anaconda``` isn't advised for setting up an environment on the cluster due to the amount of scratch space it eats up).  
+
+First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g., “requirements.txt”):
 
 ```
 ...
