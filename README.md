@@ -9,8 +9,8 @@ This page provides some tips on getting started with on a deep learning project 
 Deep learning is a subfield of Machine learning (ML) where algorithms consisting of a series of layers (i.e. an input layer, hidden layers and output layer) are trained to complete specific tasks, such as making predictions or classifications about data. While classical ML (e.g., random forests, elastic net) require features to already be extracted from MRI images (e.g., FreeSurfer measures of cortical thickness, surface area and cortical/subcortical volumes), deep learning algorthims are able to **learn the features** directly from raw images, without the need for preprocessing the data beforehand. Deep learning algorthims often (althought not always!) outperform classifical ML methods in a range of tasks.
 
 ### 2.1 Some example projects where deep learning models have been applied:
-> 1. Automated brain segmentation (e.g., SynthSeg)
-> 2. Building predictive models of biological 'brain age' (e.g., SFCN based on T1-weighted images)
+> 1. Automated brain segmentation (e.g., [SynthSeg](https://github.com/BBillot/SynthSeg))
+> 2. Generating predictive models of biological 'brain age' (e.g., [SFCN](https://github.com/ha-ha-ha-han/UKBiobank_deep_pretrain) based on T1-weighted images)
 > 3. Classifying individuals into disease categories (e.g., healthy, MCI, dementia)
 
 ### 2.2 Resources 
