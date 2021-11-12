@@ -144,9 +144,11 @@ scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/
 
  If you need a short interactive session for debugging you can request using ```qrsh```:
  
-``` qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 1``` ### CHECK THIS
-
-This command will log you into a GPU node for 30 minutes and allow you to use up to 4G of memory.
+``` 
+qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
+``` 
+### CHECK THIS
+This command requests two GPUs for 30 minutes to use up to 4G of memory.
    
 ## 8. Evaluating model performance
 You can monitor the progress of training through learning curves of your model. Several ways to do this, including using the interactive dashboard created by ```TensorFlow``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib```.
