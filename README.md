@@ -37,7 +37,7 @@ I would also recommend familiarising yourself with these open-source deep learni
 3. TorchIO: [image processing and data augmentation](https://github.com/fepegar/torchio)
 
 ## 3. Getting started on the cluster
-You can find advice on working with the HPC cluster (i.e., comic) [here](https://hpc.cs.ucl.ac.uk/) and on [this github page](https://github.com/UCL/ECON-CLUSTER). This includes links for things like:
+You can find advice on working with the HPC cluster (i.e., comic) on [UCL Department of Computer Science High Performance Computing Cluster website](https://hpc.cs.ucl.ac.uk/) and on [this github page](https://github.com/UCL/ECON-CLUSTER). This includes links for things like:
 
 > 1. Setting up an account 
 > 2. Familiarising yourself with the Sun Grid Engine (SGE)
