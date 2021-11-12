@@ -130,10 +130,14 @@ If you are using Google Colab or an equivalent and want to test your code, it's 
 Once you’re happy that things generally work – the next step is to import your script to the cluster. 
 There are several ways to do this (e.g., ```rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:    
 1. Type the following into a new terminal (replace username with your details):
-```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
+```
+ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk
+```
   
 2. Then type the following into another terminal (logged into the cluster):
-```scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts```
+```
+scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts
+```
 
 ## 7. Submit bash script to SGE scheduler or request an interactive session
 ```example.sh```  contains an example script that you can use to submit your DL job
@@ -150,8 +154,12 @@ You can monitor the progress of training through learning curves of your model. 
 Unfortunately, there isn’t a way to view your plots in the cluster (that I’m aware of), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
   
-  ```ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk```
+  ```
+  ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk
+  ```
   
 2. In another terminal (make sure you are not logged into the cluster):
   
-```scp -P 2222 username@localhost:/home/username/plot.pdf /Users/ExampleName/deep_learning_project/```
+```
+scp -P 2222 username@localhost:/home/username/plot.pdf /Users/ExampleName/deep_learning_project/
+```
