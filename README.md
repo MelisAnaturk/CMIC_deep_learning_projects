@@ -94,12 +94,12 @@ For example, if predicting whether an individual belongs to a specific category 
 ```
 .    
 ├── labels.csv   
-├── Females
+├── Females/
 │    ├── Sub_101_T1.nii.gz
 │    ├── Sub_105_T1.nii.gz
 │    ...
 │    └── Sub_N_T1.nii.gz
-└── Males
+└── Males/
      ├── Sub_101_T1.nii.gz
      ...
      └── Sub_103_T1.nii.gz
@@ -109,13 +109,13 @@ Alternatively, if you are predicting a continuous variable (e.g., age), then you
 ```
 .    
 ├── labels.csv  
-├── Sub_101
+├── Sub_101/
 │   └── T1.nii.gz
-├── Sub_102
+├── Sub_102/
 │   └── T1.nii.gz
-├── Sub_103
+├── Sub_103/
 │   └── T1.nii.gz
-├── Sub_104
+├── Sub_104/
 │   └── T1.nii.gz
 ``` 
     
