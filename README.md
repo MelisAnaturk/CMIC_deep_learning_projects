@@ -151,6 +151,7 @@ qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
 This command requests two GPUs for 30 minutes to use up to 4G of memory.
    
 ## 8. Evaluating model performance
+Create a log file of model performance
 You can monitor the progress of training through learning curves of your model. Several ways to do this, including using the interactive dashboard created by ```TensorFlow``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib```.
 
 Unfortunately, there isn’t a way to view your plots when logged into the cluster (as far as I’m aware), so you will need to copy this onto your local desktop. To do this:
