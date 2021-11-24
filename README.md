@@ -147,8 +147,7 @@ scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/
 ``` 
 qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
 ``` 
-### CHECK THIS
-This command requests two GPUs for 30 minutes to use up to 4G of memory.
+This command requests two GPUs for 30 minutes to use up to 4G of memory (per GPU).
    
 ## 8. Evaluating model performance
 Create a log file of model performance
