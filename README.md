@@ -144,7 +144,7 @@ Alternatively, if you are predicting a continuous variable (e.g., age), then you
 Where ```labels.csv``` contains the ID, label and file pathway for each participant in your sample, which will be necessary for when you are training and evaluating your model.
     
 ## 5. Prepare your script
-Put together your ```python``` script or ```Jupyter``` notebook. Some important considerations here include the model architecture given the task at hand and the type of data augmentation to apply during training, which can help reduce the risk of overfitting to your training set. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug your script. For some example scripts for Segmentation and Classification using the MONAI framework here. 
+Put together your ```python``` script or ```Jupyter``` notebook. Some important considerations here include the model architecture given the task at hand and the type of data augmentation to apply during training, which can help reduce the risk of overfitting to your training set. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug your script. For some example scripts for Segmentation and Classification using the MONAI framework [here](https://monai.io/start.html). 
 
 If you are using Google Colab or an equivalent and want to test your code, it's advisable to use publicly available data. Some examples include IXI dataset or OASIS.
 
