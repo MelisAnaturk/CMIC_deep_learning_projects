@@ -3,7 +3,7 @@
 ## 1. Introduction
 This page provides some tips on getting started with on a deep learning project using MRI data. It also includes specific instructions on how to set things up on UCL Department of Computer Science High Performance Computing (HPC) cluster (i.e. comic) for new starters. Please note that there is a bit of overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by Sophie Martin and I).
 
-***Disclaimer: The information available on this page is by no means exhaustive and may eventually become outdated. If you do find any mistakes or inaccuracies please do get in touch with me at melis.anaturk.14@ucl.ac.uk or create a pull request.***
+***Disclaimer: The information available on this page is by no means exhaustive and may eventually become outdated. If you do find any mistakes or inaccuracies please do get in touch with us at s.martin.20@ucl.ac.uk or melis.anaturk.14@ucl.ac.uk.***
 
 ## 2. General overview of deep learning
 Deep learning is a subfield of Machine learning (ML) where algorithms consisting of a series of layers (i.e. an input layer, hidden layers and output layer) are trained to complete specific tasks, such as making predictions or classifications about data. While classical ML (e.g., random forests, elastic net) require features to already be extracted from MRI images (e.g., FreeSurfer measures of cortical thickness, surface area and cortical/subcortical volumes), deep learning algorthims are able to **learn the features** directly from raw images, without the need for preprocessing the data beforehand. Deep learning algorthims often (althought not always!) outperform classical ML methods across a range of tasks.
