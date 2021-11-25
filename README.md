@@ -52,7 +52,7 @@ After setting up your account and logging into comic, you will be able to submit
 
 You may also need to install specific python packages for your deep learning project. This is best done using ```pip``` or ```pip3``` (Generally, ```Anaconda``` isn't advised for setting up an environment on the cluster due to the amount of scratch space it eats up).  
 
-**Note: It’s worth checking whether the packages required are already included e.g. numpy, matplotlib with the system-wide python installations.
+**Note: It’s worth checking whether the packages required are already included e.g. numpy, matplotlib with the system-wide python installations.**
 
 To install custom packages you can either use a list of packages or create a virtual environment attached to your project. 
 
