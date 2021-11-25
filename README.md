@@ -148,8 +148,8 @@ Put together your ```python``` script or ```Jupyter``` notebook. Some important 
 
 If you are using Google Colab or an equivalent and want to test your code, it's advisable to use publicly available data. Some examples include IXI dataset or OASIS.
 
-## 6. Move your script to cluster
-Once you’re happy that things generally work – the next step is to import your script to the cluster. 
+## 6. Moving files to the cluster
+You may need to access some files or send scripts developed locally to the cluster.
 There are several ways to do this (e.g., ```rsync```), but I tend to use ```scp``` for moving my files between my laptop and the cluster:    
 1. Type the following into a new terminal (replace ```username``` with your details). This command sets up a port forward to allow you connect to comic (i.e., a login node) via tails (i.e., a jump node):
 ```
@@ -161,15 +161,17 @@ ssh -L 2222:comic.cs.ucl.ac.uk:22 username@tails.cs.ucl.ac.uk
 scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/username/scripts
 ```
 
-## 7. Submit bash script to SGE scheduler or request an interactive session
-```example.sh``` contains an example script that you can use to submit your job to the cluster. Any outputs will be saved to a file which you can specify using the -O flag i.e. -O /path/to/save/output.txt
+## 7. Submit bash script to the SGE scheduler or request an interactive session
+**IMPORTANT: Do not run python scripts on the login nodes directly. You have to either submit a job or use an interactive session**
+
+```example.sh``` contains an example script that you can use to submit your job to the cluster. This is what will be run on the cluster compute nodes. You will also need to include the steps above that enable python and activate the environment (if required) within this script. Any outputs will be saved to a file which you can specify using the -O flag i.e. `-O /path/to/save/output.txt`.
 
 If you need a short interactive session for debugging you can also request cpu/gpu nodes using ```qrsh```:
  
 ``` 
 qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
 ``` 
-This command requests two GPUs for 30 minutes to use up to 4G of memory (per GPU).
+This command requests two GPUs for 30 minutes to use up to 4G of memory (per GPU). Everytime you enter an interactive session, you are starting from the beginning and you will need to repeat the same set-up commands to access python/environment packages.
    
 ## 8. Evaluating model performance
 Create a log file of model performance.
