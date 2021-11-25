@@ -46,9 +46,17 @@ You can find advice on working with the HPC cluster (i.e., comic) on [UCL Depart
 
 **Note: To view internal webpages you must have a CS account or request the username and password by emailing cluster-accounts@cs.ucl.ac.uk.**
 
-After setting up your account and logging into comic, you will need to install a copy of all of the python packages needed for your deep learning project using ```pip``` or ```pip3``` (Generally, ```Anaconda``` isn't advised for setting up an environment on the cluster due to the amount of scratch space it eats up).  
+After setting up your account and logging into comic, you will be able to submit jobs or enter interactive sessions to run your code on cluster cpu/gpu nodes. This requires you to activate an installation of python (or any other software) in order to run your code. 
 
-First, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save this to your scratch (e.g., “requirements.txt”):
+**Note: You do not need to install python yourself as it is pre-installed in the shared cluster space: `/share/apps/` (you can find multiple versions of python here too).**
+
+You may also need to install specific python packages for your deep learning project. This is best done using ```pip``` or ```pip3``` (Generally, ```Anaconda``` isn't advised for setting up an environment on the cluster due to the amount of scratch space it eats up).  
+
+**Note: It’s worth checking whether the packages required are already included e.g. numpy, matplotlib with the system-wide python installations.
+
+To install custom packages you can either use a list of packages or create a virtual environment attached to your project. 
+
+1. For the first, prepare a text file that contains a list of all required packages (in the following format: ```<package_name>==<version>```) and save it in your project folder (e.g., “requirements.txt”):
 
 ```
 ...
@@ -68,11 +76,25 @@ mpmath==1.1.0
 msgpack==1.0.2
 ```
 
-Once you have an exhaustive list of packages, run the following in your command line:
+You can then run the following in your command line (the --user flag makes sure that the packages are installed locally not in the shared space!):
 
-```python -m pip install -r requirements.txt --user your_username```
+```pip install -r requirements.txt --user```
 
-**Note: It’s worth checking whether the packages required are already installed in /share/apps/python-3.8.5-shared/lib before doing this step.**
+2. Alternatively, you can create a virtual environmet using [venv](https://docs.python.org/3/library/venv.html) which is shipped with Python 3. This allows you to seperate packages for specific projects and activate them when needed. Packages installed in a virtual environment can be exported into a text file if needed too.
+
+To create a venv you must be in an interactive session where you can activate python3 and run the following command:
+
+```python3 -m venv /path/to/venv --system-site-packages```
+
+This will still point to the system installation of python and pre-installed packages are included via the --system-site-packages flag. You can install additional packages using pip:
+
+```pip install my_new_package```
+
+You can then activate the environment in order to access the required packages. This can differ depending on your operating system or command shell. For example in bash/zsh run:
+
+```source path/to/venv/bin/activate```
+
+**Note: If in doubt, you can always email cluster support.**
 
 ## 4. Downloading and organising your data 
 ### 4.1 Importing/downloading data
@@ -140,9 +162,9 @@ scp -P 2222 /Users/ExampleName/Documents/example.py   manaturk@localhost://home/
 ```
 
 ## 7. Submit bash script to SGE scheduler or request an interactive session
-```example.sh```  contains an example script that you can use to submit your DL job
+```example.sh``` contains an example script that you can use to submit your job to the cluster. Any outputs will be saved to a file which you can specify using the -O flag i.e. -O /path/to/save/output.txt
 
- If you need a short interactive session for debugging you can request using ```qrsh```:
+If you need a short interactive session for debugging you can also request cpu/gpu nodes using ```qrsh```:
  
 ``` 
 qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
@@ -150,8 +172,8 @@ qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
 This command requests two GPUs for 30 minutes to use up to 4G of memory (per GPU).
    
 ## 8. Evaluating model performance
-Create a log file of model performance
-You can monitor the progress of training through learning curves of your model. Several ways to do this, including using the interactive dashboard created by ```TensorFlow``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib```.
+Create a log file of model performance.
+You can monitor the progress of training through learning curves of your model. Several ways to do this, such as using ```Tensorboard``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib``` and saving them to file.
 
 Unfortunately, there isn’t a way to view your plots when logged into the cluster (as far as I’m aware), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
