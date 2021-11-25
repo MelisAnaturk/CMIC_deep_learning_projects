@@ -86,15 +86,15 @@ To create a venv you must be in an interactive session where you can activate py
 
 ```python3 -m venv /path/to/venv --system-site-packages```
 
-This will still point to the system installation of python and pre-installed packages are included via the --system-site-packages flag. You can install additional packages using pip:
+System wide packages are included via the --system-site-packages flag. You can any install additional packages using pip:
 
 ```pip install my_new_package```
-
-You can then activate the environment in order to access the required packages. This can differ depending on your operating system or command shell. For example in bash/zsh run:
+ 
+Then, activate the environment. This can differ depending on your operating system or command shell (see [venv](https://docs.python.org/3/library/venv.html) website). For example in bash/zsh run:
 
 ```source path/to/venv/bin/activate```
 
-**Note: If in doubt, you can always email cluster support.**
+Once activated, you can run your script with access to all required packages.
 
 ## 4. Downloading and organising your data 
 ### 4.1 Importing/downloading data
