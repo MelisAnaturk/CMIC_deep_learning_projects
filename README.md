@@ -144,7 +144,7 @@ Alternatively, if you are predicting a continuous variable (e.g., age), then you
 Where ```labels.csv``` contains the ID, label and file pathway for each participant in your sample, which will be necessary for when you are training and evaluating your model.
     
 ## 5. Prepare your script
-Put together your ```python``` script or ```Jupyter``` notebook. Some important considerations here include the model architecture given the task at hand and the type of data augmentation to apply during training, which can help reduce the risk of overfitting to your training set. I've previously used Google Colab as it allows free (albeit limited) access to a GPU node and debug your script. For some example scripts for Segmentation and Classification using the MONAI framework [here](https://monai.io/start.html). 
+Put together your ```python``` script or ```Jupyter``` notebook. Some important considerations here include the model architecture given the task at hand and the type of data augmentation to apply during training, which can help reduce the risk of overfitting to your training set. I've previously used Google Colab as it allows free (albeit limited) access to a GPU/CPU node to debug your script. For some example scripts for Segmentation and Classification using the MONAI framework [here](https://monai.io/start.html). 
 
 If you are using Google Colab or an equivalent and want to test your code, it's advisable to use publicly available data. Some examples include IXI dataset or OASIS.
 
@@ -174,8 +174,7 @@ qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
 This command requests two GPUs for 30 minutes to use up to 4G of memory (per GPU). Everytime you enter an interactive session, you are starting from the beginning and you will need to repeat the same set-up commands to access python/environment packages.
    
 ## 8. Evaluating model performance
-Create a log file of model performance.
-You can monitor the progress of training through learning curves of your model. Several ways to do this, such as using ```Tensorboard``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib``` and saving them to file.
+You can monitor the progress of training by reporting the ```train_loss```, ```val_loss``` and other performance metrics after each epoch and saving them to a log file. There are several ways to do this, such as using ```Tensorboard``` or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib``` and saving them to file.
 
 Unfortunately, there isn’t a way to view your plots when logged into the cluster (as far as I’m aware), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
