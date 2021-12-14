@@ -1,4 +1,4 @@
-# Kick start your deep learning project on UCL CS HPC cluster
+# Kick start your deep learning project on the UCL CS HPC cluster
 
 ## 1. Introduction
 This page provides some tips on getting started with on a deep learning project using MRI data. It also includes specific instructions on how to set things up on UCL Department of Computer Science High Performance Computing (HPC) cluster (i.e. comic) for new starters. Please note that there is a bit of overlap between this page and UCL DRC Neuroimaging Analysis Wiki page on [deep learning](https://wiki.ucl.ac.uk/pages/viewpage.action?pageId=181248279) (written by Sophie Martin and I).
