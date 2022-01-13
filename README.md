@@ -78,21 +78,29 @@ msgpack==1.0.2
 
 You can then run the following in your command line (the --user flag makes sure that the packages are installed locally not in the shared space!):
 
-```pip install -r requirements.txt --user```
+```
+pip install -r requirements.txt --user
+```
 
 2. Alternatively, you can create a virtual environmet using [venv](https://docs.python.org/3/library/venv.html) which is shipped with Python 3. This allows you to seperate packages for specific projects and activate them when needed. Packages installed in a virtual environment can be exported into a text file if needed too.
 
 To create a venv you must be in an interactive session where you can activate python3 and run the following command:
 
-```python3 -m venv /path/to/venv --system-site-packages```
+```
+python3 -m venv /path/to/venv --system-site-packages
+```
 
 System wide packages are included via the --system-site-packages flag. You can any install additional packages using pip:
 
-```pip install my_new_package```
+```
+pip install my_new_package
+```
  
 Then, activate the environment. This can differ depending on your operating system or command shell (see [venv](https://docs.python.org/3/library/venv.html) website). For example in bash/zsh run:
 
-```source path/to/venv/bin/activate```
+```
+source path/to/venv/bin/activate
+```
 
 Once activated, you can run your script with access to all required packages.
 
@@ -174,7 +182,7 @@ qrsh -l tmem=4G,gpu=true,h_rt=0:30:0 -pe gpu 2
 This command requests two GPUs for 30 minutes to use up to 4G of memory (per GPU). Everytime you enter an interactive session, you are starting from the beginning and you will need to repeat the same set-up commands to access python/environment packages.
    
 ## 8. Evaluating model performance
-You can monitor the progress of training by reporting the ```train_loss```, ```val_loss``` and other performance metrics after each epoch and saving them to a log file. There are several ways to do this, such as using ```Tensorboard``` ([link](https://www.tensorflow.org/guide/keras/train_and_evaluate)) or creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib``` and saving them to file.
+You can monitor the progress of training by examining ```train_loss```, ```val_loss``` and other performance metrics after each epoch and saving them to a log file. There are several ways to do this, such as using ```Tensorboard``` ([link](https://www.tensorflow.org/guide/keras/train_and_evaluate)) or  otherwise creating simple plots of a performance metric (e.g., Mean Absolute Error) over training epochs using ```matplotlib``` and saving them to file.
 
 Unfortunately, there isn’t a way to view your plots when logged into the cluster (as far as I’m aware), so you will need to copy this onto your local desktop. To do this:
 1. Type the following into a new command line terminal (replace username with your details):
